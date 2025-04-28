@@ -11,16 +11,16 @@ function Navbar() {
     return (
         <>
             <div className='flex justify-around items-center pt-10 mx-auto'>
-                <div className='ml-10'>
+                {/* <div className='ml-10'>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end', color: 'white' }}>
                         <TextField id="input-with-sx" label="Search" variant="standard" />
                         <SearchIcon sx={{ ml: 1, my: 0.5 }} />
                     </Box>
-                </div>
-                <div>
+                </div> */}
+                
                     <Button onClick={() => { setIsActive(true) }} sx={{ marginRight: '10px', width: '15%' }} variant="contained" color='error' ><AddIcon /></Button>
                     <Button className='w-1/3 h-10' variant="contained" onClick={()=>{dispatch(deleteAllTodo())}}>All Delete</Button>
-                </div>
+                
             </div>
             <AddList isActive={isActive} setIsActive={setIsActive} />
         </>
