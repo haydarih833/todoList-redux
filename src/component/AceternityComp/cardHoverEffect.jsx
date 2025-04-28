@@ -57,10 +57,11 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card >
             {idEdit === item.id ?
-              <div className="bg-slate-600 rounded-2xl p-2 flex flex-wrap justify-center">
+              <div className="bg-slate-600 rounded-2xl h-full p-2 text-center">
                 <TextField  value={textEdit.title} onChange={(e)=>setTextEdit({...textEdit,title:e.target.value})} name='title' id="filled-basic" label="Title" variant="standard" />
                 <TextField  value={textEdit.description} onChange={(e)=>setTextEdit({...textEdit,description:e.target.value})} name='description' id="filled-basic" label="Description" variant="standard" />
                 <TextField  value={textEdit.priority} onChange={(e)=>setTextEdit({...textEdit,priority:e.target.value})} name='priority' type='number' id="filled-basic" label="Priority" variant="standard" />
+            
                 <div className='flex justify-center my-4'>
                   <Button onClick={() => handleSaveClick(item.id)} variant="contained" sx={{ marginRight: '7px' }}>Save</Button>
                 </div>
@@ -80,7 +81,6 @@ export const HoverEffect = ({
                   ><CloseIcon /></div>
                 </div>
               </>
-
             }
           </Card>
 
